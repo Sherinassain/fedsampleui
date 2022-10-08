@@ -12,6 +12,7 @@ class Home_page extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screensize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       body: SafeArea(
           child: Container(
         width: double.infinity,
@@ -106,13 +107,17 @@ class Home_page extends StatelessWidget {
                 )
               ],
             ),
+            SizedBox(
+              height: screensize.width * 0.02,
+            ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(10),
               child: Container(
                 height: screensize.width * 0.38,
                 width: screensize.width * 0.95,
                 decoration: BoxDecoration(
-                    color: Colors.red, borderRadius: BorderRadius.circular(10)),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   children: [
                     Padding(
@@ -194,13 +199,14 @@ class Home_page extends StatelessWidget {
                       width: screensize.width * 0.95,
                       height: screensize.width * 0.14,
                       decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          color: Colors.transparent,
                           borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(10),
                               bottomRight: Radius.circular(10))),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               children: [
@@ -208,8 +214,30 @@ class Home_page extends StatelessWidget {
                                   width: screensize.width * 0.1,
                                   height: screensize.width * 0.1,
                                   decoration: BoxDecoration(
-                                    color: Colors.yellow,
-                                  ),
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(5),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/passbookicon.jpg'),
+                                          fit: BoxFit.cover)),
+                                ),
+                                SizedBox(
+                                  width: screensize.width * 0.03,
+                                ),
+                                Text(
+                                  'FedBook',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.arrow_forward_ios_outlined,
+                                  color: Colors.black,
                                 )
                               ],
                             )
@@ -221,6 +249,87 @@ class Home_page extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: screensize.width * 0.02,
+            ),
+            Expanded(
+                child: Container(
+              decoration: BoxDecoration(color: Colors.transparent),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: screensize.width * 0.02,
+                  ),
+                  Text(
+                    'Services',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14),
+                  ),
+                  SizedBox(
+                    height: screensize.width * 0.04,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/mobile.png',
+                          title: 'Recharge'),
+                      Service_containers(
+                          imagepath: 'assets/debit-card.png',
+                          title: 'Bill payments'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/electrical-energy.png',
+                          title: 'Electricity'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/mortarboard.png',
+                          title: 'Mfee'),
+                    ],
+                  ),
+                  SizedBox(
+                    height: screensize.width * 0.04,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/credit-card.png',
+                          title: 'Credit card'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/gift-card.png',
+                          title: 'Gift card'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/toll-road.png',
+                          title: 'Fast tag'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/programmer.png',
+                          title: 'Forex'),
+                    ],
+                  ),
+                  SizedBox(
+                    height: screensize.width * 0.04,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/taxi-driver.png',
+                          title: 'Cabs'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/flight.png',
+                          title: 'Flights'),
+                      Service_containers(
+                          imagepath: 'assets/serviceicon/bus.png',
+                          title: 'Bus'),
+                      Service_containers(
+                          imagepath: 'assets/more.png', title: 'All'),
+                    ],
+                  )
+                ],
+              ),
+            ))
           ],
         ),
       )),
