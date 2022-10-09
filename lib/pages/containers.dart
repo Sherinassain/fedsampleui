@@ -73,3 +73,103 @@ class Service_containers extends StatelessWidget {
     );
   }
 }
+
+class Fund_container extends StatelessWidget {
+  final String time;
+  final String amount;
+  final String status;
+  final Color;
+
+  const Fund_container(
+      {Key? key,
+      required this.amount,
+      required this.status,
+      required this.time,required this.Color})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Size screensize = MediaQuery.of(context).size;
+    return Container(
+      width: screensize.width,
+      height: screensize.width * 0.17,
+      decoration: BoxDecoration(
+        border: Border.symmetric(
+            horizontal: BorderSide(
+          width: 1,
+          color: Colors.grey,
+        )),
+        color: Colors.transparent,
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Image.asset('assets/send-money.png'),
+          ),
+          SizedBox(
+            width: screensize.width * 0.03,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: screensize.width * 0.03,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'FUND TRANSFER',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
+                  SizedBox(
+                    width: screensize.width * 0.3,
+                  ),
+                  Text(
+                    amount,
+                    style: TextStyle(
+                        color: Color,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: screensize.width * 0.02,
+              ),
+              Row(
+                children: [
+                  Text(
+                    time,
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12),
+                  ),
+                  SizedBox(
+                    width: screensize.width * 0.45,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: screensize.width * 0.04),
+                    child: Text(
+                      status,
+                      style: TextStyle(
+                          color: Color,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
