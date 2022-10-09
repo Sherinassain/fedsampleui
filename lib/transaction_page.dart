@@ -12,19 +12,19 @@ class Transaction_page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           'TRANSACTIONS',
           style: TextStyle(color: Colors.blue),
         ),
-        leading: Icon(
+        leading: const Icon(
           Icons.menu,
           color: Colors.blue,
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ImageIcon(
-              AssetImage('assets/question.png'),
+        actions:const [
+           Padding(
+            padding: EdgeInsets.all(8.0),
+            child:  ImageIcon(
+               AssetImage('assets/question.png'),
               color: Colors.blue,
             ),
           )
@@ -48,22 +48,22 @@ class Transaction_page extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(color: Colors.grey, blurRadius: 2)
+                      boxShadow:const [
+                         BoxShadow(color: Colors.grey, blurRadius: 2)
                       ]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ImageIcon(
-                        AssetImage('assets/serviceicon/filter.png'),
+                      const ImageIcon(
+                         AssetImage('assets/serviceicon/filter.png'),
                         color: Colors.blue,
                       ),
                       SizedBox(
                         width: screensize.width * 0.04,
                       ),
-                      Text(
+                      const Text(
                         'Apply Filter',
-                        style: TextStyle(
+                        style:  TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
                             fontSize: 14),
@@ -82,10 +82,10 @@ class Transaction_page extends StatelessWidget {
             height: screensize.width * 0.07,
             decoration: BoxDecoration(color: Colors.grey[400]),
             child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 13),
-                  child: Text(
+              children:const [
+                 Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 13),
+                  child:  Text(
                     'Mon,26 Sep 2022',
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
@@ -102,43 +102,43 @@ class Transaction_page extends StatelessWidget {
             child: ListView(
               children: [
                 Column(
-                  children: [
-                    Fund_container(
+                  children:const [
+                     Fund_container(
                         amount: '- \$ 180',
                         status: 'DEBIT',
                         time: '04:44 PM',
                         Color: Colors.black),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 120',
                         status: 'CREDIT',
                         time: '03:24 AM',
                         Color: Colors.green),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 90',
                         status: 'CEBIT',
                         time: '02:00 PM',
                         Color: Colors.green),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 100',
                         status: 'DEBIT',
                         time: '04:30 AM',
                         Color: Colors.black),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 330',
                         status: 'CREDIT',
                         time: '01:20 PM',
                         Color: Colors.green),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 220',
                         status: 'DEBIT',
                         time: '04:44 PM',
                         Color: Colors.black),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 180',
                         status: 'DEBIT',
                         time: '05:45 AM',
                         Color: Colors.black),
-                    Fund_container(
+                     Fund_container(
                         amount: '- \$ 5000',
                         status: 'CREDIT',
                         time: '08:30 PM',

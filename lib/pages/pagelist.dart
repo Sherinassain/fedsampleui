@@ -21,8 +21,8 @@ class Page_list extends StatelessWidget {
               Container(
                 height: screensize.width * 0.4,
                 width: screensize.width,
-                decoration:
-                    BoxDecoration(color: Color.fromARGB(255, 107, 193, 233)),
+                decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 107, 193, 233)),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -31,7 +31,7 @@ class Page_list extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.menu,
                               color: Colors.black,
                               size: 37,
@@ -42,7 +42,7 @@ class Page_list extends StatelessWidget {
                             Container(
                               width: screensize.width * 0.35,
                               height: screensize.width * 0.09,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage('assets/bb.jpg'),
                                       fit: BoxFit.cover)),
@@ -51,11 +51,12 @@ class Page_list extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            ImageIcon(AssetImage('assets/wallet.png')),
+                            const ImageIcon(
+                                 AssetImage('assets/wallet.png')),
                             SizedBox(
                               width: screensize.width * 0.05,
                             ),
-                            ImageIcon(
+                            const ImageIcon(
                               AssetImage('assets/bell (1).png'),
                               size: 20,
                               color: Colors.black87,
@@ -63,7 +64,7 @@ class Page_list extends StatelessWidget {
                             SizedBox(
                               width: screensize.width * 0.05,
                             ),
-                            ImageIcon(
+                            const ImageIcon(
                               AssetImage('assets/power.png'),
                               size: 20,
                               color: Colors.black87,
@@ -86,7 +87,7 @@ class Page_list extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20)),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Item_containers(
                               imagepath: 'assets/send-money.png',
                               title: 'Send Money'),
@@ -128,7 +129,7 @@ class Page_list extends StatelessWidget {
                                 Container(
                                   width: screensize.width * 0.1,
                                   height: screensize.width * 0.1,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       color: Colors.transparent,
                                       image: DecorationImage(
                                           image:
@@ -150,7 +151,7 @@ class Page_list extends StatelessWidget {
 
                             ///
                             Row(
-                              children: [
+                              children: const [
                                 Text(
                                   'View All Accounts',
                                   style: TextStyle(
@@ -167,7 +168,7 @@ class Page_list extends StatelessWidget {
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               'XXXX XXXX 4203',
                               style: TextStyle(
@@ -193,9 +194,9 @@ class Page_list extends StatelessWidget {
                   Container(
                     width: screensize.width * 0.95,
                     height: screensize.width * 0.14,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: Colors.transparent,
-                        borderRadius: BorderRadius.only(
+                        borderRadius:  BorderRadius.only(
                             bottomLeft: Radius.circular(10),
                             bottomRight: Radius.circular(10))),
                     child: Padding(
@@ -211,7 +212,7 @@ class Page_list extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Colors.transparent,
                                     borderRadius: BorderRadius.circular(5),
-                                    image: DecorationImage(
+                                    image: const DecorationImage(
                                         image: AssetImage(
                                             'assets/passbookicon.jpg'),
                                         fit: BoxFit.cover)),
@@ -219,7 +220,7 @@ class Page_list extends StatelessWidget {
                               SizedBox(
                                 width: screensize.width * 0.03,
                               ),
-                              Text(
+                              const Text(
                                 'FedBook',
                                 style: TextStyle(
                                     color: Colors.black,
@@ -229,8 +230,8 @@ class Page_list extends StatelessWidget {
                             ],
                           ),
                           Row(
-                            children: [
-                              Icon(
+                            children:const [
+                               Icon(
                                 Icons.arrow_forward_ios_outlined,
                                 color: Colors.black,
                               )
@@ -249,7 +250,7 @@ class Page_list extends StatelessWidget {
           ),
           Expanded(
               child: Container(
-            decoration: BoxDecoration(color: Colors.transparent),
+            decoration: const BoxDecoration(color: Colors.transparent),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -258,9 +259,9 @@ class Page_list extends StatelessWidget {
                   SizedBox(
                     height: screensize.width * 0.02,
                   ),
-                  Text(
+                  const Text(
                     'Services',
-                    style: TextStyle(
+                    style:  TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.bold,
                         fontSize: 14),
@@ -270,17 +271,17 @@ class Page_list extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Service_containers(
+                    children:const [
+                       Service_containers(
                           imagepath: 'assets/serviceicon/mobile.png',
                           title: 'Recharge'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/debit-card.png',
                           title: 'Bill payments'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/electrical-energy.png',
                           title: 'Electricity'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/mortarboard.png',
                           title: 'Mfee'),
                     ],
@@ -290,17 +291,17 @@ class Page_list extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Service_containers(
+                    children:const [
+                       Service_containers(
                           imagepath: 'assets/serviceicon/credit-card.png',
                           title: 'Credit card'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/gift-card.png',
                           title: 'Gift card'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/toll-road.png',
                           title: 'Fast tag'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/programmer.png',
                           title: 'Forex'),
                     ],
@@ -310,17 +311,17 @@ class Page_list extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Service_containers(
+                    children:const [
+                       Service_containers(
                           imagepath: 'assets/serviceicon/taxi-driver.png',
                           title: 'Cabs'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/flight.png',
                           title: 'Flights'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/serviceicon/bus.png',
                           title: 'Bus'),
-                      Service_containers(
+                       Service_containers(
                           imagepath: 'assets/more.png', title: 'All'),
                     ],
                   )

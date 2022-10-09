@@ -17,8 +17,8 @@ class Home_page extends StatefulWidget {
 class _Home_pageState extends State<Home_page> {
   int _selectedindex = 0;
   List pages = [
-    Page_list(),
-    Transaction_page(),
+    const Page_list(),
+    const Transaction_page(),
   ];
 
   @override
@@ -29,17 +29,17 @@ class _Home_pageState extends State<Home_page> {
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _selectedindex,
             selectedItemColor: Colors.blue,
-            selectedLabelStyle: TextStyle(color: Colors.blue),
+            selectedLabelStyle: const TextStyle(color: Colors.blue),
             unselectedItemColor: Colors.grey,
-            unselectedLabelStyle: TextStyle(color: Colors.grey),
+            unselectedLabelStyle: const TextStyle(color: Colors.grey),
             onTap: (value) {
          setState(() {
                 _selectedindex = value;
          });
             },
-            items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(
+            items:const [
+               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+               BottomNavigationBarItem(
                   icon: ImageIcon(
                 AssetImage('assets/transaction.png'),
               ),label: 'Transaction'),

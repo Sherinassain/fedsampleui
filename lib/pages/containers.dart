@@ -29,7 +29,7 @@ class Item_containers extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
           ),
         ],
@@ -65,7 +65,7 @@ class Service_containers extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 13),
           ),
         ],
@@ -93,7 +93,7 @@ class Fund_container extends StatelessWidget {
     return Container(
       width: screensize.width,
       height: screensize.width * 0.17,
-      decoration: BoxDecoration(
+      decoration:const BoxDecoration(
         border: Border.symmetric(
             horizontal: BorderSide(
           width: 1,
@@ -119,7 +119,7 @@ class Fund_container extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'FUND TRANSFER',
                     style: TextStyle(
                         color: Colors.black,
@@ -145,7 +145,7 @@ class Fund_container extends StatelessWidget {
                 children: [
                   Text(
                     time,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
                         fontSize: 12),
